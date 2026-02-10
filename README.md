@@ -1,2 +1,2 @@
-# WebArtikeKelompok6
+# WebArtikelKelompok6
 WEB ARTIKEL KELOMPOK 6
