@@ -1,0 +1,223 @@
+/* ===== TEMA BIRU GELAP ELEGAN (SESUAI GAMBAR) ===== */
+:root {
+  --primary: #1e293b;           /* Biru tua gelap navbar & gradasi */
+  --primary-dark: #0f172a;      /* Lebih gelap untuk navbar & shadow */
+  --accent: #60a5fa;            /* Biru cerah lembut untuk aksen & tombol hover */
+  --button: #3b82f6;            /* Warna tombol utama (biru sedang) */
+  --button-hover: #2563eb;      /* Hover tombol */
+  --light-bg: #f8fafc;          /* Background body sangat lembut */
+  --card-bg: #ffffff;
+  --text-dark: #0f172a;
+  --text-muted: #475569;
+  --border: #cbd5e1;
+  --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: var(--primary-dark);
+  padding: 1rem 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: white !important;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand i {
+  margin-right: 0.5rem;
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: white !important;
+}
+
+/* Animasi underline — DIBUAT LEBIH MEWAH, TEBAL, ADA GLOW/SHADOW CERAH */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;                    /* Lebih rendah agar tidak nempel teks */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 4px;                     /* Lebih tebal (dari 2px jadi 4px) */
+  background: var(--accent);       /* Warna dasar accent (biru cerah lembut) */
+  border-radius: 4px;              /* Rounded lebih halus & premium */
+  box-shadow: 0 0 12px rgba(96, 165, 250, 0.7),  /* Glow utama cerah */
+              0 0 24px rgba(96, 165, 250, 0.4); /* Glow sekunder lebih lebar */
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              left 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.4s ease;
+  opacity: 0.85;                   /* Sedikit transparan saat kecil */
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 90%;                      /* Lebih lebar & dominan */
+  box-shadow: 0 0 18px rgba(96, 165, 250, 1),   /* Glow lebih terang & mewah */
+              0 0 32px rgba(96, 165, 250, 0.6); /* Efek cahaya lebih dramatis */
+  opacity: 1;
+}
+
+/* ===== HERO SECTION (persis seperti gambar) ===== */
+.hero-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #1e40af 100%);
+  color: white;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  opacity: 0.9;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.btn-cyan {
+  background: var(--button);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 14px rgba(59,130,246,0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-cyan:hover {
+  background: var(--button-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(37,99,235,0.4);
+}
+
+.btn-outline-cyan {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-cyan:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* ===== CARD & CONTENT ===== */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.card:hover,
+.hover-shadow:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: var(--primary);
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--primary-dark);
+  color: white;
+  padding: 2.5rem 0 1.5rem;
+}
+
+footer a {
+  color: rgba(255,255,255,0.85);
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.2rem; }
+  .hero-subtitle { font-size: 1.2rem; }
+  .nav-link { padding: 0.4rem 0.8rem; font-size: 0.9rem; }
+}
+
+/* ===== SPACING LEBIH LEGA & NYAMAN DIBACA ===== */
+.container.py-6 {
+  padding-top: 5rem !important;
+  padding-bottom: 6rem !important;
+}
+
+.section-title {
+  margin-top: 3rem !important;
+  margin-bottom: 2.5rem !important;
+}
+
+.fs-5.mb-5 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 4rem !important;
+}
+
+section.mb-6 {
+  margin-top: 4rem !important;
+  margin-bottom: 5rem !important;
+}
+
+/* Opsional: jika ada hero image di atas konten */
+.container-fluid.px-0 + .container.py-6 {
+  padding-top: 6rem !important;
+}

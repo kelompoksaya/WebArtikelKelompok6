@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perkembangan AI | AI Insight</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Custom style untuk memperbesar gambar card -->
+  <style>
+    .card-img-small {
+      width: 140px;                /* Diperbesar dari 85px menjadi 140px */
+      height: 140px;               /* Kotak persegi agar rapi */
+      object-fit: cover;           /* Gambar tetap proporsional tanpa distorsi */
+      border-radius: 12px;         /* Border radius lebih halus & modern */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Shadow lembut agar terlihat menonjol */
+      margin-bottom: 1.25rem;      /* Jarak bawah gambar sedikit lebih lega */
+      transition: transform 0.3s ease; /* Efek hover zoom ringan */
+    }
+
+    .card:hover .card-img-small {
+      transform: scale(1.05);      /* Sedikit zoom saat hover card */
+    }
+
+    .collapse-btn {
+      transition: all 0.3s ease;
+    }
+
+    .collapse-btn[aria-expanded="true"] .fa-chevron-down {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-brain"></i>
+        <span class="ms-2 fw-bold">AI Insight</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link active" href="perkembangan.html">Perkembangan</a></li>
+          <li class="nav-item"><a class="nav-link" href="penerapan.html">Penerapan</a></li>
+          <li class="nav-item"><a class="nav-link" href="dampak.html">Dampak</a></li>
+          <li class="nav-item"><a class="nav-link" href="masa-depan.html">Masa Depan</a></li>
+          <li class="nav-item"><a class="nav-link" href="info-lebih-lanjut.html">Info Lebih Lanjut</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container py-6">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h1 class="section-title">Perkembangan Teknologi Artificial Intelligence di Era Sekarang</h1>
+        <p class="fs-5 mb-5">
+          Dari konsep teoretis pada tahun 1950-an hingga menjadi teknologi massal di 2020-an, AI telah melewati tiga gelombang besar: <strong>rule-based systems</strong>, <strong>machine learning</strong>, dan kini <strong>generative AI</strong>. Kemajuan hardware (GPU, TPU), big data, dan algoritma canggih seperti Transformer membuat AI kini dapat menghasilkan teks, gambar, suara, bahkan kode program—dengan kualitas yang mendekati manusia.
+        </p>
+
+        <!-- Timeline -->
+        <section class="mb-6">
+          <h2 class="section-title">Sejarah Singkat Perkembangan AI</h2>
+          <div class="position-relative ps-4 ms-2">
+            <div class="position-absolute start-0 top-0 bottom-0 w-1 bg-primary rounded"></div>
+
+            <div class="mb-5 position-relative">
+              <div class="position-absolute start-[-10px] top-0 w-5 h-5 bg-primary rounded-circle"></div>
+              <h4 class="text-primary mb-2">1956: Kelahiran Istilah "Artificial Intelligence"</h4>
+              <p class="text-muted">Dalam konferensi Dartmouth, John McCarthy pertama kali memperkenalkan istilah AI.</p>
+            </div>
+
+            <div class="mb-5 position-relative">
+              <div class="position-absolute start-[-10px] top-0 w-5 h-5 bg-primary rounded-circle"></div>
+              <h4 class="text-primary mb-2">1997: Deep Blue vs Garry Kasparov</h4>
+              <p class="text-muted">Komputer IBM Deep Blue mengalahkan juara catur dunia.</p>
+            </div>
+
+            <div class="mb-5 position-relative">
+              <div class="position-absolute start-[-10px] top-0 w-5 h-5 bg-primary rounded-circle"></div>
+              <h4 class="text-primary mb-2">2012: Revolusi Deep Learning</h4>
+              <p class="text-muted">AlexNet memenangkan ImageNet Challenge dengan akurasi 85%.</p>
+            </div>
+
+            <div class="mb-5 position-relative">
+              <div class="position-absolute start-[-10px] top-0 w-5 h-5 bg-primary rounded-circle"></div>
+              <h4 class="text-primary mb-2">2022–2026: Era Generative AI</h4>
+              <p class="text-muted">ChatGPT, Midjourney, dan Sora menunjukkan kekuatan AI generatif.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contoh Nyata -->
+        <section class="mb-6">
+          <h2 class="section-title">Contoh Nyata AI di Indonesia</h2>
+          <div class="row g-4">
+
+            <!-- Card 1 -->
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <img src="C:\Users\ridho\OneDrive\Dokumen\Web Artikel Kelompok 6\assets\img\ruangguru1.jpeg" class="card-img-small mb-3" alt="Ruangguru">
+                  <h5 class="text-primary">Ruangguru Genie</h5>
+                  <p class="text-muted small">Asisten belajar berbasis AI yang memberikan soal adaptif dan analisis kesalahan siswa secara real-time.</p>
+                  
+                  <button class="btn btn-outline-primary collapse-btn w-100" type="button" 
+                          data-bs-toggle="collapse" data-bs-target="#detail1" aria-expanded="false">
+                    Lihat Detail <i class="fas fa-chevron-down ms-2"></i>
+                  </button>
+
+                  <div class="collapse mt-3" id="detail1">
+                    <div class="card card-body bg-light">
+                      <p><strong>Ruangguru Genie</strong> adalah asisten AI pendidikan yang menggunakan Large Language Model yang sudah di-fine-tune dengan kurikulum Indonesia. Fitur utamanya:</p>
+                      <ul>
+                        <li>Soal adaptif sesuai kemampuan siswa</li>
+                        <li>Analisis kesalahan belajar otomatis</li>
+                        <li>Tutor virtual 24 jam</li>
+                        <li>Laporan kemajuan untuk orang tua</li>
+                      </ul>
+                      <p class="mb-0"><strong>Dampak:</strong> Telah membantu lebih dari 1 juta siswa di seluruh Indonesia.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <img src="C:\Users\ridho\OneDrive\Dokumen\Web Artikel Kelompok 6\assets\img\ai 1.jpeg" class="card-img-small mb-3" alt="Radiologi AI">
+                  <h5 class="text-primary">AI Radiologi di RS Cipto Mangunkusumo</h5>
+                  <p class="text-muted small">Sistem deteksi dini kanker paru dari hasil rontgen dengan akurasi 92%.</p>
+                  
+                  <button class="btn btn-outline-primary collapse-btn w-100" type="button" 
+                          data-bs-toggle="collapse" data-bs-target="#detail2" aria-expanded="false">
+                    Lihat Detail <i class="fas fa-chevron-down ms-2"></i>
+                  </button>
+
+                  <div class="collapse mt-3" id="detail2">
+                    <div class="card card-body bg-light">
+                      <p>Sistem ini menggunakan <strong>deep learning (CNN + Vision Transformer)</strong> yang dilatih dengan data rontgen Indonesia. Dokter hanya perlu verifikasi hasil, sehingga waktu diagnosis jauh lebih cepat.</p>
+                      <p><strong>Keunggulan:</strong></p>
+                      <ul>
+                        <li>Akurasi deteksi hingga 95%</li>
+                        <li>Heatmap lokasi kelainan</li>
+                        <li>Mengurangi beban kerja radiologis</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <img src="C:\Users\ridho\OneDrive\Dokumen\Web Artikel Kelompok 6\assets\img\jne.jpeg" class="card-img-small mb-3" alt="Logistics AI">
+                  <h5 class="text-primary">Logistics AI di JNE & SiCepat</h5>
+                  <p class="text-muted small">Prediksi waktu pengiriman, optimasi rute, dan deteksi anomali pengiriman.</p>
+                  
+                  <button class="btn btn-outline-primary collapse-btn w-100" type="button" 
+                          data-bs-toggle="collapse" data-bs-target="#detail3" aria-expanded="false">
+                    Lihat Detail <i class="fas fa-chevron-down ms-2"></i>
+                  </button>
+
+                  <div class="collapse mt-3" id="detail3">
+                    <div class="card card-body bg-light">
+                      <p>Menggunakan <strong>predictive analytics</strong> dan reinforcement learning untuk mengolah data jutaan paket setiap hari, termasuk lalu lintas real-time dan cuaca.</p>
+                      <p><strong>Hasil nyata:</strong></p>
+                      <ul>
+                        <li>Pengiriman lebih cepat 18%</li>
+                        <li>Penghematan bahan bakar hingga 22%</li>
+                        <li>Tingkat ketepatan prediksi 96%</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <img src="C:\Users\ridho\OneDrive\Dokumen\Web Artikel Kelompok 6\assets\img\robot kolleb.jpeg" class="card-img-small mb-3" alt="Cobot Astra">
+                  <h5 class="text-primary">Robot Kolaboratif di PT Astra Otoparts</h5>
+                  <p class="text-muted small">Cobot bekerja bersama manusia dalam perakitan komponen mobil.</p>
+                  
+                  <button class="btn btn-outline-primary collapse-btn w-100" type="button" 
+                          data-bs-toggle="collapse" data-bs-target="#detail4" aria-expanded="false">
+                    Lihat Detail <i class="fas fa-chevron-down ms-2"></i>
+                  </button>
+
+                  <div class="collapse mt-3" id="detail4">
+                    <div class="card card-body bg-light">
+                      <p><strong>Cobot</strong> dengan AI vision system dapat mengenali komponen dan bekerja aman berdampingan dengan manusia tanpa pagar pengaman.</p>
+                      <p><strong>Manfaat:</strong></p>
+                      <ul>
+                        <li>Produktivitas naik 35–45%</li>
+                        <li>Kecelakaan kerja menurun signifikan</li>
+                        <li>Sangat fleksibel untuk berbagai model mobil</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Statistik -->
+        <section class="mb-6">
+          <h2 class="section-title">Statistik AI di Indonesia (2025)</h2>
+          <div class="row text-center g-4">
+            <div class="col-md-3">
+              <div class="display-4 text-primary fw-bold">1.2M+</div>
+              <div class="text-muted small">Siswa SMK terpapar materi AI</div>
+            </div>
+            <div class="col-md-3">
+              <div class="display-4 text-primary fw-bold">38%</div>
+              <div class="text-muted small">Peningkatan adopsi AI di UMKM</div>
+            </div>
+            <div class="col-md-3">
+              <div class="display-4 text-primary fw-bold">240+</div>
+              <div class="text-muted small">Startup AI aktif</div>
+            </div>
+            <div class="col-md-3">
+              <div class="display-4 text-primary fw-bold">Rp1.8T</div>
+              <div class="text-muted small">Investasi AI di pendidikan & kesehatan</div>
+            </div>
+          </div>
+        </section>
+
+        <div class="mt-6 text-center">
+          <a href="penerapan.html" class="btn btn-cyan px-5 py-3 rounded-pill fw-medium">
+            Lanjut ke: Penerapan AI di Berbagai Bidang <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5><i class="fas fa-brain me-2"></i>AI Insight</h5>
+          <p>Platform edukasi gratis tentang kecerdasan buatan untuk siswa SMK dan masyarakat umum. Kami menyajikan materi terkini, studi kasus Indonesia, dan panduan praktis agar Anda siap menghadapi era AI.</p>
+        </div>
+        <div class="col-md-2 mb-4">
+          <h6>Link Cepat</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Beranda</a></li>
+            <li><a href="perkembangan.html" class="text-white text-decoration-none">Perkembangan</a></li>
+            <li><a href="penerapan.html" class="text-white text-decoration-none">Penerapan</a></li>
+            <li><a href="dampak.html" class="text-white text-decoration-none">Dampak</a></li>
+            <li><a href="masa-depan.html" class="text-white text-decoration-none">Masa Depan</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h6>Kontak</h6>
+          <p><i class="fas fa-envelope me-2"></i> info@artikel-ai.id</p>
+          <p><i class="fas fa-phone me-2"></i> +62 815 1545 8790</p>
+          <p><i class="fas fa-map-marker-alt me-2"></i> Medan, Indonesia</p>
+        </div>
+        <div class="col-md-3 mb-4 text-center">
+          <h6>Waktu Saat Ini (WIB)</h6>
+          <div id="current-time" style="font-size:1.6rem;font-weight:bold;color:#93c5fd;"></div>
+          <div class="mt-3 d-flex justify-content-center gap-4">
+            <a href="https://wa.me/6281515458790" target="_blank" class="text-white">
+              <i class="fab fa-whatsapp fs-4"></i>
+            </a>
+            <a href="https://www.tiktok.com/@mang.katsu" target="_blank" class="text-white">
+              <i class="fab fa-tiktok fs-4"></i>
+            </a>
+            <a href="https://www.instagram.com/digitiso.vibe" target="_blank" class="text-white">
+              <i class="fab fa-instagram fs-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4 bg-white opacity-25">
+      <div class="text-center">
+        <p class="mb-0">© 2026 AI Insight. Semua hak dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Nav active -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const currentPage = window.location.pathname.split('/').pop();
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

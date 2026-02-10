@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Insight | Teknologi AI di Era Digital</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-brain"></i>
+        <span class="ms-2 fw-bold">AI Insight</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="perkembangan.html">Perkembangan</a></li>
+          <li class="nav-item"><a class="nav-link" href="penerapan.html">Penerapan</a></li>
+          <li class="nav-item"><a class="nav-link" href="dampak.html">Dampak</a></li>
+          <li class="nav-item"><a class="nav-link" href="masa-depan.html">Masa Depan</a></li>
+          <li class="nav-item"><a class="nav-link" href="info-lebih-lanjut.html">Info Lebih Lanjut</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <h1 class="hero-title">Artificial Intelligence di Era Digital Saat Ini</h1>
+    <p class="hero-subtitle">Teknologi yang mengubah cara kita belajar, bekerja, dan berinteraksi — dan Anda bisa menjadi bagian darinya.</p>
+    <div class="mt-4 d-flex flex-wrap justify-content-center gap-3">
+      <a href="perkembangan.html" class="btn btn-cyan">Mulai Belajar</a>
+      
+      <!-- Tombol Unduh PDF dengan animasi loading -->
+      <button type="button" class="btn btn-outline-cyan" id="downloadPdfBtn">
+        Unduh PDF
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Script animasi loading + download (taruh di akhir body atau di main.js) -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const downloadBtn = document.getElementById('downloadPdfBtn');
+    
+    if (downloadBtn) {
+      const originalText = downloadBtn.innerHTML; // Simpan teks asli
+      
+      downloadBtn.addEventListener('click', function (e) {
+        e.preventDefault(); // Cegah aksi default dulu
+        
+        // Ubah tombol jadi loading
+        downloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Mengunduh...';
+        downloadBtn.disabled = true; // Nonaktifkan tombol agar tidak diklik berulang
+        
+        // Simulasi loading 2–3 detik (bisa disesuaikan)
+        setTimeout(function () {
+          // Kembalikan tombol ke kondisi semula
+          downloadBtn.innerHTML = originalText;
+          downloadBtn.disabled = false;
+          
+          // Mulai download file PDF
+          const link = document.createElement('a');
+          link.href = 'Artikel AI.pdf'; // Ganti jika path PDF berbeda
+          link.download = 'Artikel AI.pdf'; // Nama file saat diunduh
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          
+          // Optional: tampilkan notifikasi selesai (bisa dihapus jika tidak perlu)
+          alert('File berhasil diunduh!');
+        }, 2500); // Durasi loading 2.5 detik (ubah sesuai keinginan)
+      });
+    }
+  });
+</script>
+
+  <!-- Konten Utama -->
+  <div class="container py-6">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+
+        <!-- CARD UTAMA -->
+        <div class="card border-0 shadow-lg mb-5 rounded-3 overflow-hidden hover-shadow"
+             data-bs-toggle="modal" data-bs-target="#modalAI">
+          <div class="card-body p-5 text-center">
+            <h2 class="section-title mb-3">Mengapa AI Penting bagi Siswa SMK?</h2>
+            <p class="fs-5 text-muted mb-0">
+              Klik untuk membaca penjelasan lengkap.
+            </p>
+          </div>
+        </div>
+
+        <div class="row gy-4 mt-4">
+
+          <!-- Pendidikan -->
+          <div class="col-md-4">
+            <div class="card p-4 text-center h-100 border-0 shadow-sm hover-shadow"
+                 data-bs-toggle="modal" data-bs-target="#modalPendidikan">
+              <div class="bg-primary rounded-circle w-12 h-12 d-flex align-items-center justify-content-center mx-auto mb-3">
+                <i class="fas fa-graduation-cap text-white fs-3"></i>
+              </div>
+              <h5 class="mb-2">Pendidikan</h5>
+              <p class="text-muted small">Klik untuk membaca detail.</p>
+            </div>
+          </div>
+
+          <!-- Kesehatan -->
+          <div class="col-md-4">
+            <div class="card p-4 text-center h-100 border-0 shadow-sm hover-shadow"
+                 data-bs-toggle="modal" data-bs-target="#modalKesehatan">
+              <div class="bg-primary rounded-circle w-12 h-12 d-flex align-items-center justify-content-center mx-auto mb-3">
+                <i class="fas fa-heartbeat text-white fs-3"></i>
+              </div>
+              <h5 class="mb-2">Kesehatan</h5>
+              <p class="text-muted small">Klik untuk membaca detail.</p>
+            </div>
+          </div>
+
+          <!-- Industri -->
+          <div class="col-md-4">
+            <div class="card p-4 text-center h-100 border-0 shadow-sm hover-shadow"
+                 data-bs-toggle="modal" data-bs-target="#modalIndustri">
+              <div class="bg-primary rounded-circle w-12 h-12 d-flex align-items-center justify-content-center mx-auto mb-3">
+                <i class="fas fa-industry text-white fs-3"></i>
+              </div>
+              <h5 class="mb-2">Industri</h5>
+              <p class="text-muted small">Klik untuk membaca detail.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modalAI" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Mengapa AI Penting bagi Siswa SMK?</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>AI sangat penting bagi siswa SMK karena dunia kerja kini membutuhkan lulusan yang melek teknologi...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="modal fade" id="modalPendidikan" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">AI di Bidang Pendidikan</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>AI membantu siswa belajar lebih efektif melalui tutor digital, penilaian otomatis...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalKesehatan" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">AI di Bidang Kesehatan</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>AI membantu tenaga medis dalam mendiagnosis penyakit lebih cepat...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalIndustri" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">AI di Bidang Industri</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Di industri, AI digunakan untuk otomasi, robot kolaboratif, dan pemeliharaan mesin...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5><i class="fas fa-brain me-2"></i>AI Insight</h5>
+          <p>Platform edukasi gratis tentang kecerdasan buatan untuk siswa SMK dan masyarakat umum. Kami menyajikan materi terkini, studi kasus Indonesia, dan panduan praktis agar Anda siap menghadapi era AI.</p>
+        </div>
+        <div class="col-md-2 mb-4">
+          <h6>Link Cepat</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Beranda</a></li>
+            <li><a href="perkembangan.html" class="text-white text-decoration-none">Perkembangan</a></li>
+            <li><a href="penerapan.html" class="text-white text-decoration-none">Penerapan</a></li>
+            <li><a href="dampak.html" class="text-white text-decoration-none">Dampak</a></li>
+            <li><a href="masa-depan.html" class="text-white text-decoration-none">Masa Depan</a></li>
+            <li><a href="info-lebih-lanjut.html" class="text-white text-decoration-none">Info Lebih Lanjut</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h6>Kontak</h6>
+          <p><i class="fas fa-envelope me-2"></i> info@artikel-ai.id</p>
+          <p><i class="fas fa-phone me-2"></i> +62 815 1545 8790</p>
+          <p><i class="fas fa-map-marker-alt me-2"></i> Medan, Indonesia</p>
+        </div>
+        <div class="col-md-3 mb-4 text-center">
+          <h6>Waktu Saat Ini (WIB)</h6>
+          <div id="current-time" style="font-size:1.6rem;font-weight:bold;color:#93c5fd;"></div>
+          <div class="mt-3 d-flex justify-content-center gap-4">
+            <a href="https://wa.me/6281515458790" target="_blank" class="text-white">
+              <i class="fab fa-whatsapp fs-4"></i>
+            </a>
+            <a href="https://www.tiktok.com/@mang.katsu" target="_blank" class="text-white">
+              <i class="fab fa-tiktok fs-4"></i>
+            </a>
+            <a href="https://www.instagram.com/digitiso.vibe" target="_blank" class="text-white">
+              <i class="fab fa-instagram fs-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4 bg-white opacity-25">
+      <div class="text-center">
+        <p class="mb-0">© 2026 AI Insight. Semua hak dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Clock & Nav -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-link').forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+        }
+      });
+
+      const currentTimeEl = document.getElementById('current-time');
+      if (currentTimeEl) {
+        function updateWIBClock() {
+          const now = new Date();
+          const options = {
+            timeZone: 'Asia/Jakarta',
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+          };
+          const formatter = new Intl.DateTimeFormat('id-ID', options);
+          const parts = formatter.formatToParts(now);
+
+          const day = parts.find(p => p.type === 'weekday')?.value || '';
+          const date = parts.find(p => p.type === 'day')?.value || '';
+          const month = parts.find(p => p.type === 'month')?.value || '';
+          const year = parts.find(p => p.type === 'year')?.value || '';
+          const hour = parts.find(p => p.type === 'hour')?.value || '';
+          const minute = parts.find(p => p.type === 'minute')?.value || '';
+          const second = parts.find(p => p.type === 'second')?.value || '';
+
+          currentTimeEl.textContent = `${day.toUpperCase()}, ${date} ${month.toUpperCase()} ${year} ${hour}:${minute}:${second}`;
+        }
+        updateWIBClock();
+        setInterval(updateWIBClock, 1000);
+      }
+    });
+  </script>
+</body>
+</html>
